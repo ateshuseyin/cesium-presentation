@@ -1,16 +1,16 @@
 {
-  "name": "cesium-webpack-example",
+  "name": "cesium-presentation",
   "version": "1.0.0",
-  "description": "The minimal recomended setup for an app using Cesium with Webpack.",
+  "description": "Cesium presentation using cesium",
   "main": "index.js",
   "keywords": [
     "cesium",
     "webpack",
-    "example"
+    "presentation"
   ],
   "author": {
-    "name": "Analytical Graphics, Inc.",
-    "url": "https://www.agi.com"
+    "name": "Hüseyin ATEŞ",
+    "url": "https://github.com/ateshuseyin"
   },
   "homepage": "https://cesiumjs.org",
   "license": "Apache-2.0",
@@ -27,9 +27,12 @@
     "webpack-dev-server": "^2.9.1"
   },
   "scripts": {
-    "build": "node_modules/.bin/webpack --config webpack.config.js",
-    "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js",
-    "release": "node_modules/.bin/webpack --config webpack.release.config.js",
-    "serve-release": "node_modules/.bin/webpack-dev-server --config webpack.release.config.js --content-base /dist"
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js",
+    "release": "webpack --config webpack.release.config.js",
+    "serve-release": "webpack-dev-server --config webpack.release.config.js --content-base /dist"
+  },
+  "dependencies": {
+    "html2canvas": "^1.0.0-alpha.9"
   }
 }
